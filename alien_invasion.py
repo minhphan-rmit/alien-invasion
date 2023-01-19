@@ -13,6 +13,8 @@ class AlienInvasion:
     def __init__(self):
         """Initialize the game, and create game resources"""
         pygame.init()
+        # class Clock from pygame.time module
+        self.clock = pygame.time.Clock()
 
         # create a 1200x800 pixels game screen
         self.screen = pygame.display.set_mode((1200, 800))
@@ -29,6 +31,8 @@ class AlienInvasion:
 
             # Make the most recently drawn screen visible
             pygame.display.flip()
+            # set the game frame rate to 60fps
+            self.clock.tick(60)
 
 
 if __name__ == '__main__':
